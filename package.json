@@ -1,0 +1,22 @@
+{
+  "name": "portfolio_v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.0.15",
+    "daisyui": "^5.0.6",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.0.15"
+  },
+  "scripts": {
+    "build:css": "postcss app.css -o public/output.css"
+  }
+}

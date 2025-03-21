@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: light --preferslight, dark --default, dracula;
+}
+
+.btn-header {
+  @apply btn-ghost text-secondary text-3xl;
+}
+
+.btn-tab {
+  @apply btn-ghost text-xl;
+}
