@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html data-theme="dracula" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Sharanya Dabas</title>
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <div class="navbar bg-base-100 shadow-sm">
+      <div class="navbar-start">
+        <!-- mobile -->
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-20 p-2 shadow"
+          >
+            <li><a href="projects.html" class="btn btn-tab">Projects</a></li>
+            <li><a class="btn btn-tab">Resume</a></li>
+            <li><a href="contact.html" class="btn btn-tab">Contact</a></li>
+          </ul>
+        </div>
+        <a href="index.html" class="btn btn-header">SD</a>
+      </div>
+      <!-- desktop -->
+      <div
+        role="tablist"
+        class="navbar-center hidden lg:flex tabs tabs-border tabs-lg"
+      >
+        <a role="tab" href="projects.html" class="tab text-lg">Projects</a>
+        <a role="tab" class="tab text-lg">Resume</a>
+        <a role="tab" href="contact.html" class="tab text-lg">Contact</a>
+      </div>
+      <div class="navbar-end"></div>
+    </div>
+
+    <div class="flex flex-row gap-12 px-12 flex-1 items-center justify-between">
+      <div class="flex flex-col flex-1">
+        <div class="text-2xl text-accent mb-4">HI, MY NAME IS</div>
+        <div class="text-6xl text-secondary mb-4">SHARANYA DABAS</div>
+        <div class="text-2xl">
+          I'm a Computer Science major at Cornell University with a passion for
+          leveraging technology to solve complex problems. I fell in love with
+          web development a few years ago, and I'm currently refining my
+          full-stack skills with a couple different personal projects.
+          Additionally, I have a few years of experience in the computer vision
+          domain while on my school's robotics team. Whatever the project may
+          be, I approach each challenge with an engineering mindset focused on
+          precision, efficiency, and collaboration. Explore my portfolio to see
+          my latest projects or get in touch to discuss how we can innovate
+          together!
+        </div>
+      </div>
+      <div
+        class="hidden lg:flex rounded-full overflow-hidden w-80 h-80 min-w-80 border-3 border-accent"
+      >
+        <script
+          type="module"
+          src="https://unpkg.com/@splinetool/viewer@1.9.79/build/spline-viewer.js"
+        ></script>
+        <spline-viewer
+          loading-anim-type="spinner-small-dark"
+          url="https://prod.spline.design/o9BfKGQ3Vh8mS4zv/scene.splinecode"
+        ></spline-viewer>
+      </div>
+    </div>
+  </body>
+</html>
