@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
     <title>Sharanya Dabas</title>
   </head>
   <body class="flex flex-col min-h-screen">
@@ -29,7 +36,7 @@
           </div>
           <ul
             tabindex="0"
-            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-20 p-2 shadow"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 p-2 shadow"
           >
             <li><a href="projects.html" class="btn btn-tab">Projects</a></li>
             <li><a href="resume.html" class="btn btn-tab">Resume</a></li>
@@ -50,10 +57,23 @@
       <div class="navbar-end"></div>
     </div>
 
-    <div class="flex flex-row gap-12 px-12 flex-1 items-center justify-between">
-      <div class="flex flex-col flex-1">
-        <div class="text-2xl text-accent mb-4">HI, MY NAME IS</div>
-        <div class="text-6xl text-secondary mb-4">SHARANYA DABAS</div>
+    <div class="flex flex-row flex-1 items-center">
+      <div class="flex flex-col flex-2/3 justify-center gap-8">
+        <div
+          class="relative hidden lg:flex rounded-full overflow-hidden w-60 h-60 border-3 border-accent scale-50 -translate-x-[60px] translate-y-[60px]"
+        >
+          <script
+            type="module"
+            src="https://unpkg.com/@splinetool/viewer@1.9.79/build/spline-viewer.js"
+          ></script>
+          <spline-viewer
+            class="absolute inset-0"
+            style="transform: scale(1.9)"
+            loading-anim-type="spinner-small-dark"
+            url="https://prod.spline.design/o9BfKGQ3Vh8mS4zv/scene.splinecode"
+          ></spline-viewer>
+        </div>
+        <div class="text-6xl text-secondary">Sharanya Dabas</div>
         <div class="text-2xl">
           I'm a Computer Science major at Cornell University with a passion for
           leveraging technology to solve complex problems. I fell in love with
@@ -66,18 +86,47 @@
           my latest projects or get in touch to discuss how we can innovate
           together!
         </div>
+        <div class="flex gap-5">
+          <a href="https://www.linkedin.com/in/sharanya-dabas/" target="_blank"
+            ><i class="devicon-linkedin-plain text-4xl"></i
+          ></a>
+          <a href="https://github.com/sharanyadabas" target="_blank">
+            <i class="devicon-github-original text-4xl"></i
+          ></a>
+        </div>
       </div>
-      <div
-        class="hidden lg:flex rounded-full overflow-hidden w-80 h-80 min-w-80 border-3 border-accent"
-      >
-        <script
-          type="module"
-          src="https://unpkg.com/@splinetool/viewer@1.9.79/build/spline-viewer.js"
-        ></script>
-        <spline-viewer
-          loading-anim-type="spinner-small-dark"
-          url="https://prod.spline.design/o9BfKGQ3Vh8mS4zv/scene.splinecode"
-        ></spline-viewer>
+      <div class="">
+        <div class="">
+          <i class="devicon-python-plain text-[70px]"></i>
+          <i class="devicon-java-plain text-[70px]"></i>
+          <i class="devicon-csharp-plain text-[70px]"></i>
+          <i class="devicon-c-plain text-[70px]"></i>
+          <i class="devicon-ocaml-plain text-[70px]"></i>
+          <i class="devicon-javascript-plain text-[70px]"></i>
+          <i class="devicon-html5-plain text-[70px]"></i>
+          <i class="devicon-css3-plain text-[70px]"></i>
+          <i class="devicon-dot-net-plain text-[70px]"></i>
+          <i class="devicon-react-plain text-[70px]"></i>
+          <i class="devicon-materialui-plain text-[70px]"></i>
+          <i class="devicon-postgresql-plain text-[70px]"></i>
+          <i class="devicon-docker-plain text-[70px]"></i>
+          <i class="devicon-amazonwebservices-plain text-[70px]"></i>
+          <!-- duplicate to make slideshow seamless -->
+          <i class="devicon-python-plain text-[70px]"></i>
+          <i class="devicon-java-plain text-[70px]"></i>
+          <i class="devicon-csharp-plain text-[70px]"></i>
+          <i class="devicon-c-plain text-[70px]"></i>
+          <i class="devicon-ocaml-plain text-[70px]"></i>
+          <i class="devicon-javascript-plain text-[70px]"></i>
+          <i class="devicon-html5-plain text-[70px]"></i>
+          <i class="devicon-css3-plain text-[70px]"></i>
+          <i class="devicon-dot-net-plain text-[70px]"></i>
+          <i class="devicon-react-plain text-[70px]"></i>
+          <i class="devicon-materialui-plain text-[70px]"></i>
+          <i class="devicon-postgresql-plain text-[70px]"></i>
+          <i class="devicon-docker-plain text-[70px]"></i>
+          <i class="devicon-amazonwebservices-plain text-[70px]"></i>
+        </div>
       </div>
     </div>
   </body>
