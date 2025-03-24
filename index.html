@@ -4,9 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <style>
+      /* Animation variables */
+      :root {
+        --icon-size: 4.5rem;
+        --icon-gap: 2.5rem;
+        --icon-count: 15;
+        --speed: 15s;
+      }
+
+      /* Mobile + tablet (horizontal layout) */
+      .infinite-slider {
+        animation: infiniteSliderHorizontal var(--speed) linear infinite;
+        display: flex;
+        flex-direction: row;
+        width: calc((var(--icon-size) + var(--icon-gap)) * var(--icon-count));
+      }
+
+      @keyframes infiniteSliderHorizontal {
+        0% {
+          transform: translateX(
+            calc(-1 * (var(--icon-size) + var(--icon-gap)) * var(--icon-count))
+          );
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      /* Large screen styles (vertical layout) */
+      @media (min-width: 1024px) {
+        .infinite-slider {
+          animation: infiniteSliderVertical var(--speed) linear infinite;
+          flex-direction: column;
+          width: auto;
+          height: calc(
+            (var(--icon-size) + var(--icon-gap)) * var(--icon-count)
+          );
+        }
+
+        @keyframes infiniteSliderVertical {
+          0% {
+            transform: translateY(
+              calc(
+                -1 * (var(--icon-size) + var(--icon-gap)) * var(--icon-count)
+              )
+            );
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+      }
+    </style>
     <title>Sharanya Dabas</title>
   </head>
-  <body class="flex flex-col min-h-screen">
+  <body class="flex flex-col h-screen">
     <div class="navbar bg-base-100 shadow-sm">
       <div class="navbar-start">
         <!-- mobile -->
@@ -29,32 +87,57 @@
           </div>
           <ul
             tabindex="0"
-            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-20 p-2 shadow"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 p-2 shadow"
           >
-            <li><a href="projects.html" class="btn btn-tab">Projects</a></li>
-            <li><a href="resume.html" class="btn btn-tab">Resume</a></li>
-            <li><a href="contact.html" class="btn btn-tab">Contact</a></li>
+            <li>
+              <a href="projects.html" class="btn btn-ghost text-nav"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a href="resume.html" class="btn btn-ghost text-nav">Resume</a>
+            </li>
+            <li>
+              <a href="contact.html" class="btn btn-ghost text-nav">Contact</a>
+            </li>
           </ul>
         </div>
-        <a href="index.html" class="btn btn-header">SD</a>
+        <a href="index.html" class="btn btn-ghost text-primary text-3xl">SD</a>
       </div>
       <!-- desktop -->
       <div
         role="tablist"
         class="navbar-center hidden lg:flex tabs tabs-border tabs-lg"
       >
-        <a role="tab" href="projects.html" class="tab text-lg">Projects</a>
-        <a role="tab" href="resume.html" class="tab text-lg">Resume</a>
-        <a role="tab" href="contact.html" class="tab text-lg">Contact</a>
+        <a role="tab" href="projects.html" class="tab text-nav">Projects</a>
+        <a role="tab" href="resume.html" class="tab text-nav">Resume</a>
+        <a role="tab" href="contact.html" class="tab text-nav">Contact</a>
       </div>
       <div class="navbar-end"></div>
     </div>
 
-    <div class="flex flex-row gap-12 px-12 flex-1 items-center justify-between">
-      <div class="flex flex-col flex-1">
-        <div class="text-2xl text-accent mb-4">HI, MY NAME IS</div>
-        <div class="text-6xl text-secondary mb-4">SHARANYA DABAS</div>
-        <div class="text-2xl">
+    <div
+      class="flex flex-col lg:flex-row flex-1 items-center justify-center px-10 lg:px-20"
+    >
+      <div class="flex flex-col w-full lg:w-4/5 justify-center gap-8">
+        <div
+          class="relative hidden lg:flex rounded-full overflow-hidden w-60 h-60 border-5 border-secondary scale-50 -translate-x-[60px] translate-y-[60px]"
+        >
+          <script
+            type="module"
+            src="https://unpkg.com/@splinetool/viewer@1.9.79/build/spline-viewer.js"
+          ></script>
+          <spline-viewer
+            class="absolute inset-0"
+            style="transform: scale(1.9) translateY(5px)"
+            loading-anim-type="spinner-small-dark"
+            url="https://prod.spline.design/o9BfKGQ3Vh8mS4zv/scene.splinecode"
+          ></spline-viewer>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-primary text-header">Sharanya Dabas</span>
+        </div>
+        <div class="text-body">
           I'm a Computer Science major at Cornell University with a passion for
           leveraging technology to solve complex problems. I fell in love with
           web development a few years ago, and I'm currently refining my
@@ -66,18 +149,115 @@
           my latest projects or get in touch to discuss how we can innovate
           together!
         </div>
+        <div class="flex gap-8">
+          <a href="https://www.linkedin.com/in/sharanya-dabas/" target="_blank"
+            ><i class="devicon-linkedin-plain text-4xl text-primary"></i
+          ></a>
+          <a href="https://github.com/sharanyadabas" target="_blank">
+            <i class="devicon-github-original text-4xl text-primary"></i
+          ></a>
+        </div>
       </div>
       <div
-        class="hidden lg:flex rounded-full overflow-hidden w-80 h-80 min-w-80 border-3 border-accent"
+        class="flex w-full lg:w-1/5 mt-8 lg:mt-0 justify-center overflow-hidden lg:h-[calc(100vh-64px)]"
       >
-        <script
-          type="module"
-          src="https://unpkg.com/@splinetool/viewer@1.9.79/build/spline-viewer.js"
-        ></script>
-        <spline-viewer
-          loading-anim-type="spinner-small-dark"
-          url="https://prod.spline.design/o9BfKGQ3Vh8mS4zv/scene.splinecode"
-        ></spline-viewer>
+        <div class="infinite-slider gap-10">
+          <div class="tooltip tooltip-bottom" data-tip="Python">
+            <i class="devicon-python-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="Java">
+            <i class="devicon-java-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="C#">
+            <i class="devicon-csharp-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="C">
+            <i class="devicon-c-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="OCaml">
+            <i class="devicon-ocaml-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="JavaScript">
+            <i class="devicon-javascript-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="HTML">
+            <i class="devicon-html5-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="CSS">
+            <i class="devicon-css3-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="ASP.NET">
+            <i class="devicon-dot-net-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="React">
+            <i class="devicon-react-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="Flask">
+            <i class="devicon-flask-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="MaterialUI">
+            <i class="devicon-materialui-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="PostGreSQL">
+            <i class="devicon-postgresql-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="Docker">
+            <i class="devicon-docker-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="AWS">
+            <i
+              class="devicon-amazonwebservices-plain text-7xl text-secondary"
+            ></i>
+          </div>
+          <!-- duplicate to make slideshow seamless -->
+          <div class="tooltip tooltip-bottom" data-tip="Python">
+            <i class="devicon-python-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="Java">
+            <i class="devicon-java-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="C#">
+            <i class="devicon-csharp-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="C">
+            <i class="devicon-c-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="OCaml">
+            <i class="devicon-ocaml-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="JavaScript">
+            <i class="devicon-javascript-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="HTML">
+            <i class="devicon-html5-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="CSS">
+            <i class="devicon-css3-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="ASP.NET">
+            <i class="devicon-dot-net-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="React">
+            <i class="devicon-react-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="Flask">
+            <i class="devicon-flask-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="MaterialUI">
+            <i class="devicon-materialui-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="PostGreSQL">
+            <i class="devicon-postgresql-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="Docker">
+            <i class="devicon-docker-plain text-7xl text-secondary"></i>
+          </div>
+          <div class="tooltip tooltip-bottom" data-tip="AWS">
+            <i
+              class="devicon-amazonwebservices-plain text-7xl text-secondary"
+            ></i>
+          </div>
+        </div>
       </div>
     </div>
   </body>
