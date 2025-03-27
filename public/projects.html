@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
     <link href="./output.css" rel="stylesheet" />
     <title>Sharanya Dabas</title>
   </head>
@@ -59,67 +64,56 @@
       </div>
       <div class="navbar-end"></div>
     </div>
-    <div
-      class="flex flex-col lg:flex-row flex-1 items-center justify-center px-10 lg:px-20"
-    >
-      <div class="flex flex-col flex-1/3 items-center justify-center">
+    <div class="flex flex-1 items-center justify-center p-10 lg:p-20">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div
-          class="carousel carousel-vertical carousel-center bg-neutral rounded-box h-96 space-y-4 p-4"
+          class="card bg-base-200 shadow-sm group transform transition-transform duration-300 hover:scale-105"
         >
-          <div id="item1" class="carousel-item relative h-full">
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-            />
+          <figure class="relative">
+            <a href="https://groovefitness.app/" target="_blank">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
+                alt="Album"
+                class="lg:blur-sm group-hover:blur-none"
+            /></a>
             <div
-              class="absolute top-5 bottom-5 left-1/2 flex flex-col -translate-x-1/2 transform justify-between"
+              class="absolute flex w-full justify-between items-center top-5 px-5"
             >
-              <a href="#item4" class="btn btn-circle">▲</a>
-              <a href="#item2" class="btn btn-circle">▼</a>
+              <div class="text-5xl font-header font-700 text-base-100">
+                Title
+              </div>
+              <a href="https://github.com/sharanyadabas" target="_blank">
+                <i class="devicon-github-original text-5xl text-base-100"></i
+              ></a>
             </div>
-          </div>
-          <div id="item2" class="carousel-item relative h-full">
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-            />
-            <div
-              class="absolute top-5 bottom-5 left-1/2 flex flex-col -translate-x-1/2 transform justify-between"
-            >
-              <a href="#item1" class="btn btn-circle">▲</a>
-              <a href="#item3" class="btn btn-circle">▼</a>
-            </div>
-          </div>
-          <div id="item3" class="carousel-item relative h-full">
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-            />
-            <div
-              class="absolute top-5 bottom-5 left-1/2 flex flex-col -translate-x-1/2 transform justify-between"
-            >
-              <a href="#item2" class="btn btn-circle">▲</a>
-              <a href="#item4" class="btn btn-circle">▼</a>
-            </div>
-          </div>
-          <div id="item4" class="carousel-item relative h-full">
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-            />
-            <div
-              class="absolute top-5 bottom-5 left-1/2 flex flex-col -translate-x-1/2 transform justify-between"
-            >
-              <a href="#item3" class="btn btn-circle">▲</a>
-              <a href="#item1" class="btn btn-circle">▼</a>
+          </figure>
+          <div class="card-body gap-4">
+            <h2 class="card-title">New album is released!</h2>
+            <p>Click the button to listen on Spotiwhy app.</p>
+            <div class="card-actions justify-around">
+              <div class="tooltip tooltip-bottom" data-tip="Python">
+                <i class="devicon-python-plain text-3xl text-secondary"></i>
+              </div>
+              <div class="tooltip tooltip-bottom" data-tip="Java">
+                <i class="devicon-java-plain text-3xl text-secondary"></i>
+              </div>
+              <div class="tooltip tooltip-bottom" data-tip="C#">
+                <i class="devicon-csharp-plain text-3xl text-secondary"></i>
+              </div>
+              <div class="tooltip tooltip-bottom" data-tip="C">
+                <i class="devicon-c-plain text-3xl text-secondary"></i>
+              </div>
             </div>
           </div>
         </div>
-        <div class="flex w-full justify-center gap-2 py-2">
-          <a href="#item1" class="btn btn-xs">Project 1</a>
-          <a href="#item2" class="btn btn-xs">Project 2</a>
-          <a href="#item3" class="btn btn-xs">Project 3</a>
-          <a href="#item4" class="btn btn-xs">Project 4</a>
-        </div>
-      </div>
-      <div class="flex flex-col flex-2/3 items-center justify-center">
-        Project details
+        <div class="p-10 border border-red-500">02</div>
+        <div class="p-10 border border-red-500">03</div>
+        <div class="p-10 border border-red-500">04</div>
+        <div class="p-10 border border-red-500">05</div>
+        <div class="p-10 border border-red-500">06</div>
+        <div class="p-10 border border-red-500">07</div>
+        <div class="p-10 border border-red-500">08</div>
+        <div class="p-10 border border-red-500">09</div>
       </div>
     </div>
   </body>

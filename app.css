@@ -20,11 +20,11 @@
 @theme {
   --font-header: Lato, sans-serif;
   --font-body: Roboto, sans-serif;
-  --font-weight-header: 700;
+  --font-weight-700: 700;
 }
 
 .text-header {
-  @apply text-7xl font-header font-medium;
+  @apply text-7xl font-header font-700;
 }
 
 .text-nav {
@@ -33,4 +33,8 @@
 
 .text-body {
   @apply text-2xl font-body text-zinc-300 leading-9;
+}
+
+.project-title {
+  @apply text-5xl font-header font-700 text-base-100;
 }
