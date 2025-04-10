@@ -21,6 +21,7 @@
   --font-header: Lato, sans-serif;
   --font-body: Roboto, sans-serif;
   --font-weight-700: 700;
+  --font-weight-500: 500;
 }
 
 .text-header {
@@ -33,6 +34,10 @@
 
 .text-body {
   @apply text-2xl font-body text-zinc-300 leading-9;
+}
+
+.text-description {
+  @apply text-xl font-body font-500;
 }
 
 .project-title {
