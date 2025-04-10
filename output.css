@@ -24,7 +24,7 @@
     --radius-xl: 0.75rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    --font-header: Lato, sans-serif;
+    --font-header: Barlow, sans-serif;
     --font-body: Roboto, sans-serif;
     --font-weight-700: 700;
     --font-weight-500: 500;
