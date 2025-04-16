@@ -41,5 +41,5 @@
 }
 
 .project-title {
-  @apply text-5xl font-header font-700 text-base-100;
+  @apply text-4xl lg:text-5xl font-header font-700 text-primary;
 }

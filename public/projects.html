@@ -81,6 +81,29 @@
       )
       .join("");
 
+    const githubIcon = project.github
+      ? `<a href="${project.github}" target="_blank">
+          <i class="devicon-github-original text-5xl text-secondary"></i>
+          </a>`
+      : ``;
+
+    const linkIcon = project.link
+      ? `<a href="${project.link}" target="_blank" class="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="size-12 text-secondary"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>`
+      : ``;
+
     return `
         <div
           tabindex="0"
@@ -88,7 +111,7 @@
         >
           <!-- overlay  -->
           <div
-            class="group-hover:bg-base-100/80 group-focus:bg-base-100/80 w-full h-full absolute transition-all duration-500 z-10"
+            class="bg-base-100/70 w-full h-full absolute transition-all duration-500 z-10"
           ></div>
 
           <!-- image -->
@@ -99,9 +122,9 @@
           />
 
           <!-- title + github -->
-          <div class="flex w-full justify-between items-center px-5">
+          <div class="flex w-full justify-between items-center">
             <div
-              class="absolute text-5xl font-header font-700 text-base-100 top-5 transition-all duration-500 group-hover:text-primary group-focus:text-primary z-20"
+              class="absolute project-title font-700 top-5 left-5 transition-all duration-500 z-20"
             >
               ${project.title}
             </div>
@@ -109,23 +132,8 @@
             <div
               class="flex gap-5 absolute text-primary top-5 -right-full transition-all duration-500 transform group-hover:right-5 group-focus:right-5 z-20"
             >
-              <a href="${project.github}" target="_blank">
-                <i class="devicon-github-original text-5xl text-secondary"></i
-              ></a>
-              <a href="${project.link}" target="_blank" class="">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  class="size-12 text-secondary"
-                  fill="currentColor"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </a>
+              ${githubIcon}
+              ${linkIcon}
             </div>
           </div>
 
@@ -145,67 +153,66 @@
 
   projects = [
     {
-      title: "Title",
-      image:
-        "https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
-      github: "https://github.com/sharanyadabas",
-      link: "https://example.com/",
+      title: "Groove",
+      image: "../assets/groove-ss.jpg",
+      github: "",
+      link: "https://groovefitness.app/",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quibusdam quae inventore, ratione necessitatibus rem consequuntur",
+        "Groove is a full‑stack fitness‑tracking web app built with a C# ASP.NET Core backend and a React front end (using Vite and Material‑UI) that lets users log workouts, monitor progress, and visualize muscle activation through interactive SVG diagrams. It leverages a PostgreSQL database on AWS RDS, Docker‑powered deployments on AWS Lightsail, ASP.NET Identity for secure authentication, and SendGrid for email notifications.",
       techStack: [
-        "devicon-python-plain",
-        "devicon-java-plain",
-        "devicon-javascript-plain",
         "devicon-csharp-plain",
-        "devicon-c-plain",
+        "devicon-dot-net-plain",
+        "devicon-react-plain",
+        "devicon-materialui-plain",
+        "devicon-postgresql-plain",
+        "devicon-amazonwebservices-plain",
       ],
     },
     {
-      title: "Title",
-      image:
-        "https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
-      github: "https://github.com/sharanyadabas",
-      link: "https://example.com/",
+      title: "Ex Engine",
+      image: "../assets/exerciseengine-ss.jpg",
+      github: "https://github.com/sharanyadabas/Exercise-Engine-SVD",
+      link: "https://exercise.3tf5a19ir6p5e.us-east-1.cs.amazonlightsail.com/",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quibusdam quae inventore, ratione necessitatibus rem consequuntur",
+        "Exercise search engine that is powered by single value decomposition on exercise descriptions to rank similarities between different exercises. Users can query via dropdown or ad-hoc search and use filters on muscle groups or equipment.",
       techStack: [
         "devicon-python-plain",
-        "devicon-java-plain",
+        "devicon-flask-plain",
         "devicon-javascript-plain",
-        "devicon-csharp-plain",
-        "devicon-c-plain",
+        "devicon-html5-plain",
+        "devicon-css3-plain",
+        "devicon-amazonwebservices-plain",
       ],
     },
     {
-      title: "Title",
-      image:
-        "https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
-      github: "https://github.com/sharanyadabas",
-      link: "https://example.com/",
+      title: "Embed Jump",
+      image: "../assets/embeddedjump-ss.jpg",
+      github: "",
+      link: "https://pages.github.coecis.cornell.edu/ece3140-sp2024/mwm223-sd699/",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quibusdam quae inventore, ratione necessitatibus rem consequuntur",
-      techStack: [
-        "devicon-python-plain",
-        "devicon-java-plain",
-        "devicon-javascript-plain",
-        "devicon-csharp-plain",
-        "devicon-c-plain",
-      ],
+        "Game controller using the FRDM-KL46Z microcontroller, leveraging its onboard accelerometer to detect tilt direction and acceleration. The controller interfaces with Python via a UART connection, enabling users to play a Pygame version of Doodle Jump with snappy, motion-based controls.",
+      techStack: ["devicon-python-plain", "devicon-c-plain"],
     },
     {
-      title: "Title",
-      image:
-        "https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
-      github: "https://github.com/sharanyadabas",
-      link: "https://example.com/",
+      title: "Caml Capital",
+      image: "../assets/camlcapital-ss.jpg",
+      github: "https://github.com/sharanyadabas/cs3110-final-project/",
+      link: "",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quibusdam quae inventore, ratione necessitatibus rem consequuntur",
+        "Functional programming approach to Monopoly, brought to life as a terminal-based multiplayer game. Using functional paradigms, it supports buying properties, houses, and hotels, as well as all community chest and chance spaces for a complete Monopoly experience.",
+      techStack: ["devicon-ocaml-plain"],
+    },
+    {
+      title: "Etch Sketch",
+      image: "../assets/etchsketch-ss.jpg",
+      github: "https://sharanyadabas.github.io/etch-a-sketch/",
+      link: "https://sharanyadabas.github.io/etch-a-sketch/",
+      description:
+        "Interactive drawing tablet that features a resizable canvas. Allows for users to pick from greyscale, color, drag, and hover modes. Note: To begin, must select both a color and drawing mode",
       techStack: [
-        "devicon-python-plain",
-        "devicon-java-plain",
         "devicon-javascript-plain",
-        "devicon-csharp-plain",
-        "devicon-c-plain",
+        "devicon-html5-plain",
+        "devicon-css3-plain",
       ],
     },
   ];
