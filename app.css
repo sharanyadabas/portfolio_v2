@@ -25,7 +25,7 @@
 }
 
 .text-header {
-  @apply text-7xl font-header font-700;
+  @apply text-5xl lg:text-7xl font-header font-700;
 }
 
 .text-nav {
@@ -33,7 +33,7 @@
 }
 
 .text-body {
-  @apply text-2xl font-body text-zinc-300 leading-9;
+  @apply text-lg lg:text-2xl font-body text-zinc-300 leading-9;
 }
 
 .text-description {
@@ -41,5 +41,5 @@
 }
 
 .project-title {
-  @apply text-4xl lg:text-5xl font-header font-700 text-primary;
+  @apply text-4xl lg:text-5xl font-header font-700;
 }
